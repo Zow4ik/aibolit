@@ -1,0 +1,79 @@
+.services {
+   position: relative;
+   z-index: 10;
+   padding-block: 75px;
+
+   &__container {
+      max-width: 1380px;
+      margin: 0 auto;
+   }
+
+   &__cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+
+      @include pc {
+         grid-template-columns: repeat(3, 1fr);
+      }
+
+      @include table {
+         grid-template-columns: 1fr 1fr;
+      }
+
+      @include mobile {
+         grid-template-columns: 1fr;
+      }
+   }
+
+   &__card {
+      border-radius: var(--radius-card);
+      min-height: 220px;
+      box-shadow: 2px 2px 20px rgba(155, 82, 50, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px;
+      position: relative;
+      transition: var(--transition);
+      border: 2px solid var(--background-color-light);
+
+      @include hover {
+         border: 2px solid rgba(0, 0, 0, 0.1);
+
+         .services__image {
+            color: var(--text-brown);
+         }
+      }
+   }
+
+   &__link {
+      font-size: 20px;
+      line-height: 1;
+      color: var(--text-brown);
+      max-width: max-content;
+      
+      &::before {
+         content: '';
+         position: absolute;
+         inset: 0;
+      }
+   }
+
+   &__title {
+      font-family: 'SchoolBook';
+      font-size: 30px;
+      line-height: 1.33333;
+      color: var(--text-brown);
+      position: relative;
+   }
+
+   &__image {
+      position: absolute;
+      right: 24px;
+      bottom: 24px;
+      pointer-events: none;
+      color: var(--text-orange);
+      transition: var(--transition);
+   }
+}

@@ -1,0 +1,121 @@
+.contacts {
+   padding-block: 235px 210px;
+
+   @include desktop {
+      padding-block: 130px;
+   }
+
+   @include table {
+      padding-block: 75px;
+   }
+
+   &__container {
+      max-width: 1490px;
+      margin: 0 auto;
+
+      @include table {
+         text-align: center;
+      }
+   }
+
+   &__title {
+      color: var(--text-dark);
+      font-weight: 400;
+      font-family: 'SchoolBook';
+      font-size: 40px;
+      line-height: 1;
+      margin-bottom: 70px;
+   }
+
+   &__body {
+      display: flex;
+      column-gap: 30px;
+
+      @include table {
+         flex-direction: column;
+
+         iframe {
+            width: 100%;
+            height: 400px;
+         }
+      }
+   }
+
+   &__address {
+      max-width: 490px;
+
+      @include table {
+         margin: 0 auto;
+         text-align: left;
+         margin-bottom: 30px;
+      }
+   }
+
+   &__street {
+      display: block;
+      font-family: 'SchoolBook';
+      font-size: 30px;
+      line-height: 1;
+      color: var(--text-dark);
+      font-weight: 400;
+      margin-bottom: 20px;
+      text-align: center;
+   }
+
+   &__info {
+      display: block;
+      font-family: 'Futura New';
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1.5;
+      color: var(--text-brown);
+      padding-left: 40px;
+      max-width: 270px;
+      position: relative;
+
+      &:nth-child(2)::before,
+      &:nth-child(3)::before,
+      &:nth-child(4)::before {
+         content: '';
+         position: absolute;
+         left: 0;
+         top: 50%;
+         translate: 0 -50%;
+         width: 25px;
+         height: 28px;
+         background-repeat: no-repeat;
+      }
+
+      &:nth-child(2)::before {
+         background-image: url('../../images/contacts-location.svg');
+      }
+
+      &:nth-child(3)::before {
+         background-image: url('../../images/contacts-phone.svg');
+      }
+
+      &:nth-child(4)::before {
+         background-image: url('../../images/contacts-time.svg');
+      }
+
+      &:not(:last-child) {
+         margin-bottom: 15px;
+      }
+
+      &-wrapper:first-child {
+         margin-bottom: 40px;
+      }
+
+      &-wrapper {
+         @include mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &:first-child {
+               margin-bottom: 50px;
+            }
+         }
+      }
+   }
+}

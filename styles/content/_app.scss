@@ -1,0 +1,75 @@
+.app {
+   background-color: var(--background-color-orange);
+   padding-block: 250px 350px;
+
+   @include desktop {
+      padding-block: 130px;
+   }
+
+   @include table {
+      padding-block: 75px;
+   }
+
+   @include desktop {
+      justify-content: center;
+      text-align: center;
+   }
+
+   &__container {
+      max-width: 1490px;
+      margin: 0 auto;
+      color: #FFF;
+      position: relative;
+      
+      &::after {
+         content: '';
+         position: absolute;
+         right: 0;
+         top: -50px;
+         width: 492px;
+         height: 550px;
+         background-image: url('../../images/app-image.png');
+         background-repeat: no-repeat;
+
+         @include desktop {
+            display: none;
+         }
+      }
+   }
+    
+   &__badge {
+      font-size: 30px;
+      line-height: 1;
+      font-family: 'Futura New';
+      margin-bottom: 30px;
+      display: inline-block;
+   }
+
+   &__title {
+      font-family: 'SchoolBook';
+      font-size: 80px;
+      line-height: 1;
+      margin-bottom: 42px;
+      max-width: 830px;
+      font-weight: 400;
+
+      @include desktop {
+         font-size: 65px;
+         max-width: 770px;
+         margin-inline: auto;
+      }
+
+      @include mobile {
+         font-size: 55px;
+      }
+   }
+
+   &__link-wrapper {
+      display: flex;
+      column-gap: 32px;
+
+      @include desktop {
+         justify-content: center;
+      }
+   }
+}

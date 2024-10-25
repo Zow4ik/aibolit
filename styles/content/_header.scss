@@ -1,0 +1,156 @@
+.header {
+   font-size: 20px;
+   line-height: 1;
+   font-family: 'Futura New', sans-serif;
+   font-weight: 700;
+   padding-block: 65px;
+
+   @include pc {
+      font-size: 18px;
+   }
+
+   @include mobile {
+      padding-block: 25px;
+   }
+
+   &__container {
+      display: flex;
+      max-width: 1790px;
+      justify-content: space-between;
+      align-items: center;
+      margin-inline: auto;
+      column-gap: 15px;
+   }
+
+   &__menu {
+      color: var(--text-grey);
+
+      @include table {
+         display: none;
+      }
+
+      &-list {
+         display: flex;
+         align-items: center;
+         column-gap: 80px;
+
+         @include pc {
+            column-gap: 35px;
+         }
+      }
+
+      &-link {
+         transition: var(--transition);
+
+         @include hover {
+            color: var(--text-brown);
+         }
+      }
+
+      &-body {
+         position: relative;
+      }
+
+      &-button {
+         padding-block: 15px;
+         transition: var(--transition);
+         cursor: pointer;
+
+         @include hover {
+            color: var(--text-brown);
+         }
+      }
+   }
+
+   &__menu-body:hover &__submenu {
+      opacity: 1;
+      pointer-events: all;
+      top: 50px;
+   }
+
+   &__menu-body:active &__submenu {
+      opacity: 1;
+      pointer-events: all;
+      top: 50px;
+   }
+
+   &__submenu {
+      background-color: var(--background-color-light);
+      opacity: 0;
+      pointer-events: none;
+      transition: var(--transition);
+      position: absolute;
+      z-index: 100;
+      top: 35px;
+      left: -40px;
+      width: 300px;
+      box-shadow: 2px 2px 20px rgba(155, 82, 50, 0.1);
+      padding: 40px 20px 40px 50px;
+      border-radius: var(--radius-card);
+
+      li:first-child {
+         font-weight: 700;
+      }
+
+      &-item {
+         color: var(--text-dark);
+         font-weight: 400;
+         margin-bottom: 40px;
+
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
+   }
+
+   &__overlay-buttons {
+      display: flex;
+      align-items: center;
+      column-gap: 15px;
+   }
+
+   &__burger-menu {
+      width: 50px;
+      height: 50px;
+      background-color: var(--text-brown);
+      position: relative;
+      border-radius: 10px;
+      display: none;
+
+      &::after {
+         content: '';
+         width: 35px;
+         height: 4px;
+         border-radius: 10px;
+         background-color: var(--text-orange);
+         box-shadow: 0px 10px var(--text-orange), 0px -10px var(--text-orange);
+
+         @include centerPosition;
+      }
+
+      @include table {
+         display: block;
+      }
+   }
+
+   &__city {
+      cursor: pointer;
+      color: var(--text-orange);
+      padding-block: 15px;
+      padding-left: 39px;
+      position: relative;
+      text-transform: uppercase;
+
+      &::before {
+         content: '';
+         position: absolute;
+         left: 0;
+         top: 50%;
+         translate: 0 -50%;
+         width: 20px;
+         height: 29px;
+         background-image: url('/images/mark-city.svg');
+         background-repeat: no-repeat;
+      }
+   }
+}

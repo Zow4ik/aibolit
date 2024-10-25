@@ -1,0 +1,22 @@
+:root {
+   --background-color-light: rgba(255, 254, 254, 1);
+   --background-color-grey: rgba(251, 248, 248, 1);
+   --background-color-orange: rgba(255, 197, 158, 1);
+   --background-color-brown: rgba(89, 68, 63, 1);
+
+   --text-dark: rgba(8, 6, 6, 1);
+   --text-grey: rgba(195, 185, 181, 1);
+   --text-orange: rgba(255, 197, 158, 1);
+   --text-brown: rgba(89, 68, 63, 1);
+
+   --border-color: rgba(195, 185, 181, 1);
+
+   --transition: all 0.5s ease 0s;
+
+   --radius-link: 33px;
+   --radius-card: 20px;
+
+   --border: 1px solid var(--border-color);
+
+   --container-padding-x: 15px;
+}

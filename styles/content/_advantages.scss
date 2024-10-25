@@ -1,0 +1,82 @@
+.advantages {
+   color: var(--text-dark);
+   padding-block: 235px 300px;
+
+   @include desktop {
+      padding-block: 130px;
+      text-align: center;
+   }
+
+   @include table {
+      padding-block: 75px;
+   }
+
+   &__container {
+      max-width: 1640px;
+      margin: 0 auto;
+   }
+
+   &__title {
+      font-size: 40px;
+      line-height: 1;
+      font-family: 'SchoolBook';
+      margin-bottom: 100px;
+      text-align: center;
+
+      @include table {
+         margin-bottom: 55px;
+      }
+   }
+
+   &__cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 70px 30px;
+
+      @include desktop {
+         grid-template-columns: 1fr 1fr;
+         justify-content: center;
+         text-align: center;
+      }
+
+      @include table {
+         grid-template-columns: 1fr;
+      }
+   }
+
+   &__card {
+   }
+
+   &__card-title {
+      font-size: 30px;
+      @include lineHeight(40, 30);
+      font-family: 'SchoolBook';
+      margin-bottom: 35px;
+   }
+
+   &__card-body {
+      display: flex;
+      column-gap: 50px;
+
+      @include desktop {
+         justify-content: center;
+      }
+
+      @include mobile {
+         column-gap: 25px;
+      }
+   }
+
+   &__card-image {
+   }
+
+   &__card-text {
+      max-width: 320px;
+      color: var(--text-brown);
+      font-family: 'Futura New';
+      font-size: 20px;
+      text-align: left;
+
+      @include lineHeight(30, 20);
+   }
+}

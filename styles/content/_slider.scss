@@ -1,0 +1,158 @@
+.slider {
+   padding-block: 65px 75px;
+   overflow: hidden;
+
+   @include mobile {
+      padding-block: 50px 15px;
+   }
+
+   &__container {
+      display: flex;
+      max-width: 1730px;
+      margin: 0 auto;
+
+      @include table {
+         justify-content: center;
+      }
+   }
+   
+   &__body {
+      position: relative;
+
+      &:first-child {
+         display: flex;
+
+         @include table {
+            flex-direction: column;
+            text-align: center;
+         }
+      }
+   }
+
+   &__button-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+
+      @include table {
+         flex-direction: row;
+         margin: 0 auto;
+         margin-bottom: 40px;
+         column-gap: 4vw;
+      }
+   }
+
+   &__button {
+      font-family: 'Futura New', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1;
+      color: var(--text-grey);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      position: relative;
+
+      &::after {
+         content: '';
+         position: absolute;
+      }
+   }
+
+   .active-button {
+      color: var(--text-dark);
+      border: 3px solid var(--text-dark);
+   }
+
+   &__content {
+      margin-left: 8vw;
+
+      @include table {
+         margin-left: 0;
+      }
+   }
+
+   &__title {
+      margin-bottom: 50px;
+      font-family: 'SchoolBook', sans-serif;
+      font-weight: 400;
+      font-size: 80px;
+      color: var(--text-dark);
+      max-width: 820px;
+
+      @include lineHeight(110, 80);
+
+      @include desktop {
+         margin-bottom: 40px;
+         line-height: 1.2;
+         font-size: 60px;
+      }
+
+      @include mobile {
+         font-size: 45px;
+      }
+   }
+
+   &__link-record {
+      display: inline-block;
+      text-transform: uppercase;
+      font-family: 'Futura New', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1;
+      color: rgba(255, 255, 255, 1);
+      background-color: var(--background-color-orange);
+      padding: 24px 77px;
+      border-radius: 33px;
+      transition: var(--transition);
+      margin-bottom: 195px;
+
+      @include hover {
+         background-color: var(--background-color-brown);
+      }
+
+      @include desktop {
+         margin-bottom: 100px;
+      }
+   }
+
+   &__soc-wrapper {
+      display: flex;
+      column-gap: 50px;
+
+      @include table {
+         justify-content: center;
+      }
+   }
+
+   &__soc {
+   }
+
+   &__image {
+      max-width: 926px;
+      max-width: 915px;
+      margin-right: -150px;
+
+      @include table {
+         display: none;
+      }
+   }
+
+   &__link-tel {
+      position: absolute;
+      right: 60px;
+      bottom: 0;
+      padding: 10px;
+      font-family: 'Futura New', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: rgba(89, 68, 63, 1);
+
+      @include lineHeight(30, 24);
+
+      @include table {
+         display: none;
+      }
+   }
+}

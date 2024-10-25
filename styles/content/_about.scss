@@ -1,0 +1,123 @@
+.about {
+   padding-block: 180px 200px;
+   background-color: var(--background-color-grey);
+
+   @include desktop {
+      padding-block: 130px;
+   }
+
+   @include table {
+      padding-block: 75px;
+   }
+
+   &__container {
+      max-width: 1283px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 100px;
+   }
+
+   &__body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &:nth-child(1) {
+         max-width: 485px;
+      }
+   }
+
+   &__title {
+      font-family: 'SchoolBook';
+      font-size: 40px;
+      line-height: 1;
+      margin-bottom: 48px;
+      text-align: center;
+
+      @include mobile {
+         margin-bottom: 30px;
+      }
+   }
+
+   &__cards {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 35px;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      img {
+         flex: 0 0 178px;
+      }
+   }
+
+   &__text {
+      font-family: 'Futura New';
+      font-size: 20px;
+      line-height: 1.5;
+      color: var(--text-brown);
+      margin-bottom: 36px;
+
+      @include mobile {
+         margin-bottom: 17;
+      }
+   }
+
+   &__link {
+      font-family: 'Futura New';
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1;
+      color: var(--text-orange);
+      text-transform: uppercase;
+      transition: var(--transition);
+      position: relative;
+      padding: 10px 20px 10px 0px;
+
+      @include hover {
+         color: var(--text-brown);
+
+         &::before,
+         &::after {
+            background-color: var(--text-brown);
+            translate: 0 0;
+         }
+
+         &::before {
+            right: 10px;
+            top: 7px;
+         }
+
+         &::after {
+            top: calc(100% - 10px);
+            right: 10px;
+         }
+      }
+
+      &::before,
+      &::after {
+         content: '';
+         width: 12px;
+         height: 3px;
+         background-color: var(--text-orange);
+         border-radius: 5px;
+         position: absolute;
+         translate: 0 -50%;
+         transition: var(--transition);
+      }
+
+      &::before {
+         right: 0;
+         top: calc(50% - 3.5px);
+         rotate: 45deg;
+      }
+
+      &::after {
+         right: 0;
+         top: calc(50% + 3.5px);
+         rotate: -45deg;
+      }
+   }
+}

@@ -1,0 +1,66 @@
+.mobile-overlay-city {
+   background-color: rgba(8, 6, 6, 0.2);
+   position: fixed;
+   width: 100vw;
+   height: 100vh;
+   top: 0;
+   left: 0;
+   display: none;
+   z-index: 1000;
+
+   &__body {
+      padding: 50px 120px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      border-radius: var(--radius-card);
+      background-color: var(--background-color-light);
+
+      @include centerPosition
+   }
+
+   &__text {
+      font-family: "SchoolBook";
+      font-size: 30px;
+      line-height: 1.333;
+      margin-bottom: 40px;
+   }
+
+   &__link {
+      font-family: "Futura New";
+      font-size: 20px;
+      line-height: 1;
+      cursor: pointer;
+
+      &:not(:last-child) {
+         margin-bottom: 30px;
+      }
+   }
+
+   &__button {
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 30px;
+      height: 30px;
+
+      &::after,
+      &::before {
+         content: '';
+         width: 20px;
+         height: 2px;
+         border-radius: 5px;
+         background-color: var(--text-grey);
+
+         @include centerPosition;
+      }
+
+      &::after {
+         rotate: 45deg;
+      }
+      &::before {
+         rotate: -45deg;
+      }
+   }
+}

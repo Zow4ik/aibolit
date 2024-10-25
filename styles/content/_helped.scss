@@ -1,0 +1,65 @@
+.helped {
+   padding-block: 310px 235px;
+   overflow: hidden;
+
+   @include desktop {
+      padding-block: 130px;
+      text-align: center;
+   }
+
+   @include table {
+      padding-block: 75px;
+   }
+
+   &__container {
+      max-width: 746px;
+      margin: 0 auto;
+   }
+
+   &__title {
+      font-size: 80px;
+      font-family: 'Futura New';
+      font-weight: 400;
+      position: relative;
+
+      &::after {
+         content: '';
+         position: absolute;
+         width: 288px;
+         height: 223px;
+         right: -200px;
+         bottom: -100px;
+         background-image: url('../../images/image_bird.png');
+         background-repeat: no-repeat;
+
+         @include mobile {
+            display: none;
+         }
+      }
+
+      @include desktop {
+         font-size: 50px;
+      }
+      
+      @include table {
+         font-size: 35px;
+      }
+
+      span {
+         color: var(--text-brown);
+         font-family: 'SchoolBook';
+         font-weight: 700;
+         font-size: 144px;
+         line-height: 1;
+         display: block;
+
+         @include desktop {
+            font-size: 100px;
+         }
+
+         @include table {
+            font-size: 70px;
+         }
+      }
+   }
+}
