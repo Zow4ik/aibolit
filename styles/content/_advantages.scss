@@ -44,9 +44,6 @@
       }
    }
 
-   &__card {
-   }
-
    &__card-title {
       font-size: 30px;
       @include lineHeight(40, 30);
@@ -65,9 +62,6 @@
       @include mobile {
          column-gap: 25px;
       }
-   }
-
-   &__card-image {
    }
 
    &__card-text {

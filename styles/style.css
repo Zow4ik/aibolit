@@ -191,28 +191,28 @@ button {
 
 @font-face {
   font-family: "Futura New";
-  src: url("/fonts/FuturaNewBook-Reg.woff2") format("woff2");
+  src: url("../fonts/FuturaNewBook-Reg.woff2") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "Futura New";
-  src: url("/fonts/FuturaNewBold-Reg.woff2") format("woff2");
+  src: url("../fonts/FuturaNewBold-Reg.woff2") format("woff2");
   font-style: normal;
   font-weight: 700;
   font-display: swap;
 }
 @font-face {
   font-family: "SchoolBook";
-  src: url("/fonts/SchoolBookC.woff2") format("woff2");
+  src: url("../fonts/SchoolBookC.woff2") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "SchoolBook";
-  src: url("/fonts/SchoolBookC-Bold.woff2") format("woff2");
+  src: url("../fonts/SchoolBookC-Bold.woff2") format("woff2");
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -398,7 +398,7 @@ body {
   translate: 0 -50%;
   width: 20px;
   height: 29px;
-  background-image: url("/images/mark-city.svg");
+  background-image: url("../images/mark-city.svg");
   background-repeat: no-repeat;
 }
 
@@ -928,7 +928,7 @@ body {
   height: 223px;
   right: -200px;
   bottom: -100px;
-  background-image: url("../../images/image_bird.png");
+  background-image: url("../images/image_bird.png");
   background-repeat: no-repeat;
 }
 @media (max-width: 767.98px) {
@@ -1075,7 +1075,7 @@ body {
   top: -50px;
   width: 492px;
   height: 550px;
-  background-image: url("../../images/app-image.png");
+  background-image: url("../images/app-image.png");
   background-repeat: no-repeat;
 }
 @media (max-width: 1280.98px) {
@@ -1205,13 +1205,13 @@ body {
   background-repeat: no-repeat;
 }
 .contacts__info:nth-child(2)::before {
-  background-image: url("../../images/contacts-location.svg");
+  background-image: url("../images/contacts-location.svg");
 }
 .contacts__info:nth-child(3)::before {
-  background-image: url("../../images/contacts-phone.svg");
+  background-image: url("../images/contacts-phone.svg");
 }
 .contacts__info:nth-child(4)::before {
-  background-image: url("../../images/contacts-time.svg");
+  background-image: url("../images/contacts-time.svg");
 }
 .contacts__info:not(:last-child) {
   margin-bottom: 15px;

@@ -87,15 +87,15 @@
       }
 
       &:nth-child(2)::before {
-         background-image: url('../../images/contacts-location.svg');
+         background-image: url('../images/contacts-location.svg');
       }
 
       &:nth-child(3)::before {
-         background-image: url('../../images/contacts-phone.svg');
+         background-image: url('../images/contacts-phone.svg');
       }
 
       &:nth-child(4)::before {
-         background-image: url('../../images/contacts-time.svg');
+         background-image: url('../images/contacts-time.svg');
       }
 
       &:not(:last-child) {
